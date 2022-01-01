@@ -10,8 +10,10 @@ print(f'Pssst, the solution is {chosen_word}.')
 #Create an empty List called display.
 display = []
 
-
-
+#For each letter in the chosen_word, add a "_" to 'display'.
+for letter in chosen_word:
+    display += "_"
+print(display)
 
 
 #Ask the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
