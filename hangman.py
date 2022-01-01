@@ -20,8 +20,9 @@ print(display)
 guess = input("Guess a letter: ").lower()
 
 #Check if the letter the user guessed (guess) is one of the letters in the chosen_word.
-for letter in chosen_word:
+word_lenght = len(chosen_word)
+for position in range(word_lenght):
+    letter = chosen_word[position]
     if letter == guess:
-        print("Right")
-    else:
-        print("Wrong")
+        display[position] = letter
+print(display)
