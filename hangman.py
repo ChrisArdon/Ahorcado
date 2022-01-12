@@ -1,10 +1,70 @@
 import random
 
+stages = ['''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+''']
+
 word_list = ["aardvark", "baboon", "camel", "common", "element", "andrea", "gisselle"]
 
 chosen_word = random.choice(word_list)
 word_length = len(chosen_word)
 
+#Create a variable called 'lives' to keep track of the number of lives left. 
+#Set 'lives' to equal 6.
+lives = 6
 
 #Testing code
 print(f'Pssst, the solution is {chosen_word}.')
