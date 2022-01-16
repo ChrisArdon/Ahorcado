@@ -28,6 +28,11 @@ end_of_game = False
 #Check guessed letter
 while not end_of_game:
     guess = input("Guess a letter: ").lower()
+    
+    #If the user has entered a letter they've already guessed, print the letter and let them know.
+    if guess in display:
+        print(f"You've already guessed {guess}")
+        
     for position in range(word_length):
         letter = chosen_word[position]
     
@@ -37,15 +42,17 @@ while not end_of_game:
     #If guess is not a letter in the chosen_word,
     #Then reduce 'lives' by 1. 
     if guess not in chosen_word:
-        lives -= 1
-    print(lives)
+        #If the letter is not in the chosen_word, print out the letter and let them know it's not in the word.
+        print(f"You guessed {guess}, that's not in the word. You lose a life.")
+        lives -= 1    
     
     #If lives goes down to 0 then the game should stop and it should print "You lose."
     if lives <= 0:
         end_of_game = True
         print("You Lose.")
 
-    print(display)
+    #Join all the elements in the list and turn it into a String.
+    print(f"{' '.join(display)}")
 
     if "_" not in display:
         end_of_game = True
